@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature of all the cities </title>
+    <style>
+        div {
+            text-align: center;
+        }
+        h4 {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+    <h1> All city Temperatures </h1>
+    <hr>
+    <br> <br> 
+        
+        <h4> Note : The cities which is not in our dataBase will not be apper</h4>
+        <br> <br>
+       <ul>
+         <% for(let i=0; i<nums.length; i++) {%>
+              <% if(nums[i] == undefined)  %>
+              <% if(nums[i].city == undefined) continue; %>
+              <% if(nums[i].main == undefined) continue; %>
+              <% if(nums[i].main.temp == undefined) continue; %>
+              <li> <b>city : <%= nums[i].city%> &nbsp; <%= nums[i].main.temp%>&deg; </b></li>
+         <% } %>
+
+      </ul>
+    </div>
+
+</body>
+</html>
